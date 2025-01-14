@@ -1,0 +1,227 @@
+/*fonts*/
+.rubik-light {
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.rubik-regular {
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.rubik-medium
+{
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.rubik-semi-bold {
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.rubik-bold {
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.rubik-extra-bold {
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+/*affect all*/
+body{
+    font-family: "Rubik", serif !important;
+}
+
+.container{
+    margin: 0;
+}
+
+/*components*/
+.primary-text{
+    color: white !important;
+}
+
+.secondary-text{
+    color: #293660 !important;
+}
+
+.ghost-color{
+    color: #6D6D6D !important;
+}
+
+.bg-image {
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.top-bar{
+    background-color: #00008E;
+}
+
+.nav-bar{
+    background: linear-gradient(180deg, #F9FAFE 0%, rgba(249, 250, 254, 0.44) 100%);
+}
+
+h1 {
+    font-size: 50px !important;
+    font-weight: 800 !important;
+}
+
+h2{
+    font-size: 46px !important;
+    font-weight: 700 !important;
+}
+
+h3 {
+    font-size: 26px !important;
+    font-weight: 600 !important;
+}
+
+h4 {
+    font-size: 22px !important;
+    font-weight: 600 !important;
+}
+
+h5 {
+    font-size: 30px !important;
+    font-weight: 500 !important;
+}
+
+a {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.required:after {
+    content:" *";
+    color: red;
+  }
+
+.btn-primary-custom {
+    background-color: #04BE02 !important;
+    height: 54px !important;
+    width: 217px !important;
+    border-radius: 0 !important;
+    border: none !important;
+    font-weight: 600 !important;
+    font-size: 20px !important;
+    color: white !important;
+}
+
+.btn-primary-custom a{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* Hero section */
+.jumbotron .text-container {
+    max-width: 800px;
+}
+
+.jumbotron .text-container h5{
+    max-width: 700px;
+}
+
+/* form section */
+.form-container {
+    background-color: white;
+}
+
+form .ghost-color{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+form .btn-primary-custom{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* about us section */
+.about-us {
+    max-width: 470px;
+}
+
+.about-us p {
+    color: #6C646A !important;
+    font-size: 18px;
+}
+
+/* advantage section */
+.advantage .card{
+    height: 510px;
+    border-radius: 0 !important;
+    box-shadow: 0px 2px 25px 0px rgba(0, 0, 142, 0.15);
+
+}
+
+.advantage h3{
+    font-weight: 700 !important;
+}
+
+/* features section */
+.features .text-container{
+    max-width: 327px;
+    font-size: 17px;
+}
+
+/* value section */
+.value h2 {
+    font-weight: 800;
+    max-width: 700px;
+}
+
+.value p {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.value .text-container{
+    max-width: 874px;
+}
+
+.value img {
+    margin-right: 15px;
+}
+.bg-value {
+    min-height: 70dvh !important;
+}
+
+/* customer section */
+.overlap-box {
+    background-color: #293660; /* Warna biru */
+    color: white;
+    text-align: center;
+    position: relative;
+    margin-top: -50px; /* Overlap ke Value Section */
+    z-index: 2;
+    box-shadow: 0px 2px 25px 0px rgba(0, 0, 142, 0.15);
+    max-width: 1000px;
+    
+}
+
+.overlap-box h2{
+    margin-bottom: 0;
+}
+
+.customer-section {
+    background-color: #F9FAFE;
+}
+.customer-logos {
+    text-align: center;
+}
+
