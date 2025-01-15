@@ -19,15 +19,15 @@
         </div>
     @endif
     <!-- top Section -->
-    <nav class="navbar top-bar">
+    <nav class="navbar top-bar primary-text py-3">
         <div class="container justify-content-end">
             <a href="#">ID</a>
-            <p>|</p>
+            <span style='font-size:15px;'>&#9474;</span>
             <a href="#">EN</a>
         </div>
     </nav>
     <!-- Nav Section -->
-    <nav class="navbar nav-bar">
+    <nav class="navbar nav-bar py-3">
         <div class="container justify-content-start">
             <a class="navbar-brand" href="#">
                 <img src="{{ asset('images/logo-helios.png') }}" alt="Helios Logo">
@@ -44,7 +44,8 @@
                 <h1>Cybersecurity Made Simple with Sangfor Cyber Command</h1>
                 <h5 class="mt-4">Simplify your cybersecurity with Sangfor Cyber Command's user-friendly interface and comprehensive threat protection.</h5>
                 <button class="btn btn-primary-custom text-uppercase mt-4">
-                    <a href="#">Free Trial</a>
+                    <span class="btn-text"><a href="#">Free Trial</a></span>
+                    <span class="btn-label"><img src="{{ asset('images/icon-caret.svg') }}" alt="caret"></span>
                 </button>    
             </div>
         </div>
@@ -125,7 +126,7 @@
     <!-- advantages Section -->
     <div class="bg-image pb-5 pt-5" style="background-image: url({{ asset('images/bg-adv.png') }})"> 
         <div class="container text-center advantage">
-            <div class="row mb-5">
+            <div class="row my-5">
                 <div class="col-md-12">
                     <h2 class="primary-text">Sangfor Cyber Command Advantages</h2>
                 </div>
@@ -173,7 +174,7 @@
         </div>
     </div>
     <!-- features Section -->
-    <div class="container text-center features">
+    <div class="container text-center features mt-5">
         <div class="row p-5">
             <div class="col-12">
                 <h2 class="secondary-text">Sangfor Cyber Command Features</h2>
@@ -182,21 +183,27 @@
         <div class="row g-5"><!-- row 1 -->
             <div class="col col-md-4">
                 <img src="{{ asset('images/ft-threat.png') }}" class="card-img-top mx-auto" alt="..." style="height: 205px; width: 205px;">
-                <h3 class="secondary-text">Threat Intelligence</h3>
+                <div class="justify-content-center d-flex">
+                    <h3 class="secondary-text">Threat Intelligence</h3>
+                </div>
                 <div class="justify-content-center d-flex">
                     <p class="text-container">Advanced AI algorithms and machine learning provide comprehensive threat intelligence to stay ahead of the latest cyber threats.</p>
                 </div>
             </div>
             <div class="col col-md-4">
                 <img src="{{ asset('images/ft-realtime.png') }}" class="card-img-top mx-auto" alt="..." style="height: 205px; width: 205px;">
-                <h3 class="secondary-text">Real-Time Detections</h3>
+                <div class="justify-content-center d-flex">
+                    <h3 class="secondary-text">Real-Time Detections</h3>
+                </div>
                 <div class="justify-content-center d-flex">
                     <p class="text-container">Real-time alert system provides instant notification of potential security incidents.</p>
                 </div>
             </div>
             <div class="col col-md-4">
                 <img src="{{ asset('images/ft-investigation.png') }}" class="card-img-top mx-auto" alt="..." style="height: 205px; width: 205px;">
-                <h3 class="secondary-text">Threats Investigation</h3>
+                <div class="justify-content-center d-flex">
+                    <h3 class="secondary-text">Threats Investigation</h3>
+                </div>
                 <div class="justify-content-center d-flex">    
                     <p class="text-container">In-depth Threat investigation capabilities identify the root cause of security incidents and take appropriate action to prevent future occurrences.</p>
                 </div>
@@ -205,14 +212,18 @@
         <div class="row g-5 mt-1">
             <div class="col col-md-6">
                 <img src="{{ asset('images/ft-solution.png') }}" class="card-img-top mx-auto" alt="..." style="height: 205px; width: 205px;">
-                <h3 class="secondary-text">Comprehensive Security Solutions</h3>
+                <div class="justify-content-center d-flex">
+                    <h3 class="secondary-text">Comprehensive Security Solutions</h3>
+                </div>   
                 <div class="justify-content-center d-flex">
                     <p class="text-container">In-depth Threat investigation capabilities identify the root cause of security incidents and take appropriate action to prevent future occurrences.</p>
                 </div>
             </div>
             <div class="col col-md-6">
                 <img src="{{ asset('images/ft-response.png') }}" class="card-img-top mx-auto" alt="..." style="height: 205px; width: 205px;">
-                <h3 class="secondary-text">Rapid Response</h3>
+                <div class="justify-content-center d-flex">
+                    <h3 class="secondary-text">Rapid Response</h3>
+                </div>
                 <div class="justify-content-center d-flex">
                     <p class="text-container">Tight integration with network and endpoint security solutions enables quick response to potential security incidents, minimizing the impact of any attacks.</p>
                 </div>
@@ -220,7 +231,7 @@
         </div>
     </div>
     <!-- value section -->
-    <div class="bg-image bg-value value pb-5 pt-5" style="background-image: url({{ asset('images/bg-value.png') }})"> 
+    <div class="bg-image bg-value value pb-5 pt-5 mt-5" style="background-image: url({{ asset('images/bg-value.png') }})"> 
         <div class="container text-center">
             <div class="justify-content-center d-flex mb-5 mt-5">  
                 <h2 class="secondary-text">Sangfor Cyber Command’s Value to Customers</h2>
@@ -271,24 +282,99 @@
             </div>
         </div>
     </div>  
-    <!-- customer Section -->
-    <div class="customer-section">
-        <div class="d-flex justify-content-center">
-            <div class="overlap-box px-5 py-4">
-                <h2>Cyber Command Customers Reference</h2>
-            </div>
-        </div>
-        <div class="customer-logos">
-            <img src="{{ asset('images/cust-jnt.png') }}" alt="Customer Logo J&T">
-            <img src="{{ asset('images/cust-jasa.png') }}" alt="Customer Logo 2">
-            <img src="{{ asset('images/cust-ok.png') }}" alt="Customer Logo 3">
-            <img src="{{ asset('images/cust-samudera.png') }}" alt="Customer Logo 3">
+<!-- Customer Section -->
+<div class="container customer-section">
+    <div class="d-flex justify-content-center">
+        <div class="overlap-box px-5 py-4">
+            <h2>Cyber Command Customers Reference</h2>
         </div>
     </div>
+    <div class="customer-logos d-flex align-items-center justify-content-center py-5 mt-3 mb-5 flex-wrap">
+        <img src="{{ asset('images/cust-jnt.png') }}" alt="Customer Logo J&T" class="img-fluid">
+        <img src="{{ asset('images/cust-jasa.png') }}" alt="Customer Logo 2" class="img-fluid">
+        <img src="{{ asset('images/cust-ok.png') }}" alt="Customer Logo 3" class="img-fluid">
+        <img src="{{ asset('images/cust-samudera.png') }}" alt="Customer Logo 3" class="img-fluid">
+    </div>
+</div>
     <!-- explore -->
-    <h2>Explore Sangfor Cyber Command with Helios</h2>
-    <h5>Helios Informatika Nusantara as Sangfor Distributor will provide</h5>
-    <!-- footer Section -->
+    <div class="container explore text-center my-5 py-5">
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="secondary-text">Explore Sangfor Cyber Command with Helios</h2>
+                <h3 class="ghost-color">Helios Informatika Nusantara as Sangfor Distributor will provide</h3>
+            </div>
+        </div>
+        <div class="row pt-3 pb-5">
+            <div class="col-md-4 d-flex justify-content-center pb-5">
+                <div class="card text-center py-5 px-2">
+                    <img src="{{ asset('images/ex-implementation.png') }}" class="card-img-top mx-auto" alt="..." style="height: 108px; width: 108px;">
+                    <div class="card-body">
+                    <h3 class="card-title secondary-text">NDR Implementation</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center pb-5">
+                <div class="card text-center py-5 px-2">
+                    <img src="{{ asset('images/ex-implementation.png') }}" class="card-img-top mx-auto" alt="..." style="height: 108px; width: 108px;">
+                    <div class="card-body">
+                    <h3 class="card-title secondary-text">Incident Response and Threat Hunting</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center pb-5">
+                <div class="card text-center py-5 px-2">
+                    <img src="{{ asset('images/ex-implementation.png') }}" class="card-img-top mx-auto" alt="..." style="height: 108px; width: 108px;">
+                    <div class="card-body">
+                    <h3 class="card-title secondary-text">Device Security Maintenance</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <footer class="primary-text py-5">
+        <div class="container-fluid px-5">
+            <div class="d-flex  justify-content-md-between align-items-center justify-content-sm-center">
+                <!-- Left Section -->
+                <div class="left-section">
+                    <h3 class="text-white mb-5">PT. Helios Informatika Nusantara</h3>
+                    <p class="text-white mb-5">
+                        Centennial Tower, 12th Floor,<br>
+                        Jl. Jendral Gatot Subroto<br>
+                        No. Kav 24-25, Jakarta<br>
+                        12930 Indonesia
+                    </p>
+                    <p class="text-white mb-5">
+                        <span>Phone:</span> +62 21 8062 2220 <br>
+                        <span>Email:</span> tencent@helios.id
+                    </p>
+                    <div class="social-icons d-flex justify-content-md-start justify-content-sm-center">
+                        <a href="https://www.instagram.com" target="_blank" class="me-3">
+                            <img src="{{ asset('images/footer-facebook.svg') }}" alt="Facebook" class="img-fluid">
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" class="me-3">
+                            <img src="{{ asset('images/footer-ig.svg') }}" alt="Instagram" class="img-fluid">
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" class="me-3">
+                            <img src="{{ asset('images/footer-Twitter.svg') }}" alt="Twitter" class="img-fluid">
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" class="me-3">
+                            <img src="{{ asset('images/footer-Youtube.svg') }}" alt="YouTube" class="img-fluid">
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" class="me-3">
+                            <img src="{{ asset('images/footer-Linkedin.svg') }}" alt="LinkedIn" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+                <!-- Right Section -->
+                <div class="right-section">
+                    <img class="" src="{{ asset('images/footer-worldmap.svg') }}" alt="World Map">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom text-center py-4 primary-text">
+        <p class="text-white mb-0">© 2023 - PT. Helios Informatika Nusantara - All Rights Reserved</p>
+    </div>
 
-    
 @endsection

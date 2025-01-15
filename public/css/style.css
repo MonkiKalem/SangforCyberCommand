@@ -1,47 +1,3 @@
-/*fonts*/
-.rubik-light {
-    font-family: "Rubik", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-}
-
-.rubik-regular {
-    font-family: "Rubik", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.rubik-medium
-{
-    font-family: "Rubik", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-}
-
-.rubik-semi-bold {
-    font-family: "Rubik", serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-}
-
-.rubik-bold {
-    font-family: "Rubik", serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.rubik-extra-bold {
-    font-family: "Rubik", serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-}
-
 /*affect all*/
 body{
     font-family: "Rubik", serif !important;
@@ -67,14 +23,6 @@ body{
 .bg-image {
     background-size: cover;
     min-height: 100vh;
-}
-
-.top-bar{
-    background-color: #00008E;
-}
-
-.nav-bar{
-    background: linear-gradient(180deg, #F9FAFE 0%, rgba(249, 250, 254, 0.44) 100%);
 }
 
 h1 {
@@ -128,6 +76,21 @@ a {
     font-size: 20px;
 }
 
+/* navbar section */
+.top-bar{
+    background-color: #00008E;
+}
+
+.top-bar a{
+    font-size: 20px !important;
+    font-weight: 500;
+}
+
+.nav-bar{
+    background: linear-gradient(180deg, #F9FAFE 0%, rgba(249, 250, 254, 0.44) 100%);
+    box-shadow: 0px 2px 25px 0px #00008E27;
+}
+
 /* Hero section */
 .jumbotron .text-container {
     max-width: 800px;
@@ -135,6 +98,31 @@ a {
 
 .jumbotron .text-container h5{
     max-width: 700px;
+}
+
+.jumbotron .btn{
+    display: inline-flex;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+    outline: none;
+    width: 271px !important;
+}
+
+.jumbotron .btn-label,.btn-text{
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+.jumbotron .btn-text{
+    padding: 0 53px;
+}
+
+.jumbotron .btn-label{
+    background-color: #018000;
+    margin-right: 0px;
+    padding: 0 22px;
 }
 
 /* form section */
@@ -177,6 +165,10 @@ form .btn-primary-custom{
 .features .text-container{
     max-width: 327px;
     font-size: 17px;
+}
+
+.features h3 {
+    max-width: 327px;
 }
 
 /* value section */
@@ -223,5 +215,102 @@ form .btn-primary-custom{
 }
 .customer-logos {
     text-align: center;
+    gap: 90px;
 }
 
+/* explore section */
+.explore .card{
+    border: none;
+    border-radius: 0 !important;
+    box-shadow: 0px 2px 25px 0px rgba(0, 0, 142, 0.15);
+    max-width: 380px;
+    max-height: 305px;
+}
+
+.explore h2 {
+    font-weight: 800 !important;
+}
+
+.explore h3 {
+    font-weight: 500 !important;
+    font-size: 28px !important;
+    color: #19456B !important;
+}
+
+/* footer section */
+footer {
+    background: linear-gradient(135deg, rgb(0, 0, 142) 0%, rgb(4, 190, 2) 100%);
+    overflow: hidden;
+}
+
+footer h3 {
+    font-weight: 700 !important;
+    font-size: 28px !important;
+}
+
+footer p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+footer span {
+    font-weight: 700;
+}
+
+.footer-bottom {
+    background-color: #000A85;
+}
+
+.footer-bottom p {
+    margin-bottom: 0px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+footer .px-5 {
+    padding-left: 200px !important;
+    padding-right: 200px !important;
+}
+
+.left-section {
+    position: relative;
+    z-index: 1;
+}
+/* thank you section */
+.thankyou .btn-primary-custom{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.thankyou p{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.thankyou .btn{
+    width: 280px !important;
+}
+
+@media (max-width: 768px) {
+    
+    
+    footer .px-5 {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .right-section img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 100%;
+        
+        opacity: 0.1; /* Mengurangi opacity agar teks tetap terlihat jelas */
+    }
+
+    footer {
+        text-align: center;
+    }
+}
