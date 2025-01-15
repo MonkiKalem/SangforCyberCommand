@@ -3,21 +3,6 @@
 @section('title', 'Sangfor Cyber Command')
 
 @section('content')
-    @if (session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-    @endif
-
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
     <!-- top Section -->
     <nav class="navbar top-bar primary-text py-3">
         <div class="container justify-content-end">
@@ -44,82 +29,120 @@
                 <h1>Cybersecurity Made Simple with Sangfor Cyber Command</h1>
                 <h5 class="mt-4">Simplify your cybersecurity with Sangfor Cyber Command's user-friendly interface and comprehensive threat protection.</h5>
                 <button class="btn btn-primary-custom text-uppercase mt-4">
-                    <span class="btn-text"><a href="#">Free Trial</a></span>
+                    <span class="btn-text"><a href="#form-trial">Free Trial</a></span>
                     <span class="btn-label"><img src="{{ asset('images/icon-caret.svg') }}" alt="caret"></span>
                 </button>    
             </div>
         </div>
     </div>
     <!-- about us & form section -->
-    <div class="bg-image" style="background-image: url({{ asset('images/bg-form.png') }})"> 
+    <div class="bg-image p-5" style="background-image: url({{ asset('images/bg-form.png') }})"> 
         <div class="container pt-5 pb-5">
             <div class="row align-items-center">
                 <div class="col-md-6"> <!-- about us -->
                     <div class="about-us pt-5">
                         <h2 class="secondary-text mb-3">About Sangfor Cyber Command</h2>
-                        <p class="mb-5">
+                        <p class="mb-4">
                             Sangfor Cyber Command falls into Network Detection & Response (NDR) Solutions which is a comprehensive security management platform designed to protect businesses from cyber threats.
                         </p>
-                        <p class="mb-5">
+                        <p class="mb-4">
                             It provides a range of security solutions such as threat detection, incident response, and compliance management. With Sangfor Cyber Command, organizations can monitor their network traffic, analyze security events, and respond to incidents quickly and efficiently.  
                         </p>
-                        <p class="mb-5">
+                        <p class="mb-4">
                             The platform uses advanced machine learning algorithms and big data analytics to identify and prevent cyber-attacks before they cause damage.  It also offers a user-friendly dashboard that enables businesses to track their security posture in real-time and make informed decisions based on the insights provided.  
                         </p>
-                        <p class="mb-5">
+                        <p class="mb-4">
                             Overall, Sangfor Cyber Command is a powerful tool for businesses looking to strengthen their cybersecurity defenses and safeguard their assets from modern-day threats. 
                         </p>
                     </div>
                 </div>
                 <div class="col-md-6"> <!-- form -->
-                    <div class="form-container p-5">
+                    <div class="form-container p-5" id="form-trial">
                         <h3 class="secondary-text fw-bold">Dapatkan Free Trial selama 1 bulan,</h3>
                         <h4 class="ghost-color">analisa keamanan network anda dan lihat hasilnya!</h4>
                         <form method="POST" action="{{ route('submit.form') }}">
                             @csrf
+                
+                            @if(session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+                
                             <div class="row mb-3">
                                 <div class="col">
                                     <label for="first-name" class="form-label ghost-color ms-3 required">First Name</label>
-                                    <input type="text" class="form-control" placeholder="First name" id="first-name" name="first-name" value="{{ old('first-name') }}">
+                                    <input type="text" class="form-control @error('first-name') is-invalid @enderror" placeholder="First name" id="first-name" name="first-name" value="{{ old('first-name') }}">
+                                    @error('first-name')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 <div class="col">
                                     <label for="last-name" class="form-label ghost-color ms-3 required">Last Name</label>
-                                    <input type="text" class="form-control" placeholder="Last name" id="last-name" name="last-name" value="{{ old('last-name') }}">
+                                    <input type="text" class="form-control @error('last-name') is-invalid @enderror" placeholder="Last name" id="last-name" name="last-name" value="{{ old('last-name') }}">
+                                    @error('last-name')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
                                 </div>
                             </div>
+                
                             <div class="mb-3">
                                 <label for="corporate-email" class="form-label ghost-color ms-3 required">Corporate Email</label>
-                                <input type="email" class="form-control" placeholder="email@mail.com" id="corporate-email" name="corporate-email" value="{{ old('corporate-email') }}">
+                                <input type="email" class="form-control @error('corporate-email') is-invalid @enderror" placeholder="email@mail.com" id="corporate-email" name="corporate-email" value="{{ old('corporate-email') }}">
+                                @error('corporate-email')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
+                
                             <div class="mb-3">
                                 <label for="job-title" class="form-label ghost-color ms-3 required">Job Title</label>
-                                <input type="text" class="form-control" placeholder="Your job" id="job-title" name="job-title" value="{{ old('job-title') }}">
+                                <input type="text" class="form-control @error('job-title') is-invalid @enderror" placeholder="Your job" id="job-title" name="job-title" value="{{ old('job-title') }}">
+                                @error('job-title')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
+                
                             <div class="mb-3">
                                 <label for="company-name" class="form-label ghost-color ms-3 required">Company Name</label>
-                                <input type="text" class="form-control" placeholder="Your company" id="company-name" name="company-name" value="{{ old('company-name') }}">
+                                <input type="text" class="form-control @error('company-name') is-invalid @enderror" placeholder="Your company" id="company-name" name="company-name" value="{{ old('company-name') }}">
+                                @error('company-name')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
+                
                             <label for="industry" class="form-label ghost-color ms-3">Industry</label>
-                            <select class="form-select mb-3" name="industry" aria-label="Industry Select" id="industry">
+                            <select class="form-select mb-3 @error('industry') is-invalid @enderror" name="industry" aria-label="Industry Select" id="industry">
                                 <option selected>Industry</option>
-                                <option value="One" {{ old('industry') == 'One' ? 'selected' : '' }}>One</option>
-                                <option value="Two" {{ old('industry') == 'Two' ? 'selected' : '' }}>Two</option>
-                                <option value="Three" {{ old('industry') == 'Three' ? 'selected' : '' }}>Three</option>
+                                <option value="One" {{ old('industry') == 'Technology' ? 'selected' : '' }}>One</option>
+                                <option value="Two" {{ old('industry') == 'Education' ? 'selected' : '' }}>Two</option>
+                                <option value="Three" {{ old('industry') == 'Medication' ? 'selected' : '' }}>Three</option>
                             </select>
+                            @error('industry')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                
                             <div class="mb-3">
                                 <label for="phone-number" class="form-label ghost-color ms-3 required">Phone Number</label>
-                                <input type="text" class="form-control" placeholder="Your number" id="phone-number" name="phone-number" value="{{ old('phone-number') }}">
+                                <input type="text" class="form-control @error('phone-number') is-invalid @enderror" placeholder="Your number" id="phone-number" name="phone-number" value="{{ old('phone-number') }}">
+                                @error('phone-number')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
+                
                             <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="agree" name="agree" {{ old('agree') ? 'checked' : '' }}>
+                                <input type="checkbox" class="form-check-input @error('agree') is-invalid @enderror" id="agree" name="agree" {{ old('agree') ? 'checked' : '' }}>
                                 <label class="form-check-label ghost-color" for="agree">Click this box to agree to be contacted by our team and get great deals on Sangfor for Helios!</label>
+                                @error('agree')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
+                
                             <div class="d-flex justify-content-center">
                                 <button type="submit" class="btn btn-primary-custom text-uppercase">Send</button>
                             </div>
-                        </form>              
+                        </form>                
                     </div>
-                </div>
+                </div>                
             </div>
         </div>
     </div>

@@ -15,15 +15,15 @@ class FormController extends Controller
             'corporate-email' => 'required|email|max:255',
             'job-title' => 'required|string|max:255',
             'company-name' => 'required|string|max:255',
-            'phone-number' => 'required|string|max:15', // Validasi untuk phone number
+            'phone-number' => 'required|string|max:15',
             'industry' => 'required|string',
             'agree' => 'accepted',
         ]);
 
         // Logika penyimpanan data (misal, simpan ke database)
-        // Anda bisa membuat model dan tabel untuk menyimpan data form ini
 
         // Redirect ke halaman "Thank You" setelah berhasil
         return redirect()->route('thankyou.page')->with('success', 'Form submitted successfully!');
     }
 }
+
